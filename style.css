@@ -5,6 +5,7 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background: #80c0c0;
 }
 .name{
     //position: absolute;
@@ -18,7 +19,9 @@ body{
     display: flex;
     position: fixed;
     width: 100%;
-    
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "icon name blank";
     justify-content: space-between;
@@ -33,13 +36,21 @@ body{
     padding-top: 100px;
     text-align: center;
 }
+.h-team{
+    display: flex;
+    justify-content: center;
+}
+
 .team{
-    margin-top: 30px;
+    margin-top: 1px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
 }
 .news{
     display: grid;
-    /* grid-template-columns: auto auto auto; */
-    /* grid-template-rows: auto auto; */
+    grid-template-columns: 1fr 1fr 1fr; 
+     grid-template-rows: auto auto; 
     grid-template-areas:
         "latest blank blank"
         "item1 item2 item3";
@@ -55,25 +66,57 @@ body{
 }
 .latest{
     grid-area: latest;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 h {
     font-size: 30px;
     font-weight: bold;
 }
+.blank{
+    grid-area: blank;
+}
+
 .linksBox{
     display: grid;
+    background-color: #904590;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 10px;
+    color: #c0ffff;
     grid-template-areas:
         "h-our-links blank blank"
         "discord-links insta-links linktree-links";
 }
 
+.a-links{
+    color: inherit;
+    text-decoration: none;
+    font-size: 20px;
+}
+
 .discord-links {
+    align-content: center;
+    background: #402040;
     grid-area: discord-links;
 }
-.insta-links {
+.insta-links{
+    align-content: center;
+    background: #402040;
     grid-area: insta-links;
 }
 .linktree-links{
+    align-content: center;
+    background: #402040;
     grid-area: linktree-links;
+}
+
+.links{
+    margin-top: 20px;
+    padding: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+.events-to-come{
+    
 }
