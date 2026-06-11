@@ -1,3 +1,8 @@
+:root{
+    --main-color: #904590;
+    --background-color: #80c0c0;
+}
+
 .icon{
     //position: absolute;
     justify-content: left;
@@ -5,7 +10,7 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: #80c0c0;
+    background: var(--background-color);
 }
 .name{
     //position: absolute;
@@ -26,7 +31,7 @@ body{
     grid-template-areas: "icon name blank";
     justify-content: space-between;
     align-items: center;
-    background-color: #904590;
+    background-color: var(--main-color);
     padding: 0px;
     margin: 0px;
     
@@ -45,12 +50,15 @@ body{
     margin-top: 1px;
     font-size: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .news{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-     grid-template-rows: auto auto; 
+    grid-template-rows: auto auto;
+    column-gap: 40px;
     grid-template-areas:
         "latest blank blank"
         "item1 item2 item3";
@@ -74,16 +82,39 @@ h {
     font-weight: bold;
 }
 .blank{
+    display: flex;
     grid-area: blank;
 }
 
+.team-descriptions{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    
+}
+.team-description-container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
 .linksBox{
     display: grid;
-    background-color: #904590;
+    background-color: var(--main-color);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     column-gap: 10px;
-    color: #c0ffff;
+    color: var(--background-color);
     grid-template-areas:
         "h-our-links blank blank"
         "discord-links insta-links linktree-links";
@@ -93,6 +124,8 @@ h {
     color: inherit;
     text-decoration: none;
     font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .discord-links {
@@ -117,6 +150,15 @@ h {
     bottom: 0px;
     left: 0px;
 }
+
 .events-to-come{
-    
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;    
+}
+
+.events-table{
+    background-color: var(--main-color);
 }
