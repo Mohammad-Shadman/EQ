@@ -8,6 +8,12 @@
     justify-content: left;
     grid-area: icon;
 }
+
+html,body{
+    margin: 0px;
+    padding: 0px;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: var(--background-color);
@@ -19,6 +25,25 @@ body{
 }
 .h-name{
     font-size: 50px;
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000);
+    background-size: 2000% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow-shift 8s linear infinite;
+}
+
+
+
+@keyframes rainbow-shift {
+    0%{
+        background-position: 0%;
+      //filter: hue-rotate(0deg);
+  }
+    100% {
+        background-position: 105%;
+      //filter: hue-rotate(360deg);
+  }
 }
 .topnav{
     display: flex;
@@ -59,6 +84,7 @@ body{
     grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: auto auto;
     column-gap: 40px;
+    padding: 30px;
     grid-template-areas:
         "latest blank blank"
         "item1 item2 item3";
@@ -97,6 +123,7 @@ h {
     display: flex;
     align-content: center;
     justify-content: center;
+    padding: 20px;
 }
 
 
@@ -107,6 +134,10 @@ h {
     padding-right: 10px;
 }
 
+
+.link-content{
+    padding: 10px;
+}
 
 .linksBox{
     display: grid;
@@ -124,37 +155,46 @@ h {
     color: inherit;
     text-decoration: none;
     font-size: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    //padding: 10px;
 }
 
 .discord-links {
+    display: flex;
+    flex-direction: column;
     align-content: center;
     background: #402040;
     grid-area: discord-links;
+    padding: 10px;
 }
 .insta-links{
+    display: flex;
+    flex-direction: column;
     align-content: center;
     background: #402040;
     grid-area: insta-links;
+    padding: 10px;
 }
 .linktree-links{
+    display: flex;
+    flex-direction: column;
     align-content: center;
     background: #402040;
     grid-area: linktree-links;
+    padding: 10px;
 }
 
 .links{
-    margin-top: 20px;
+    margin: 0px;
     padding: 0px;
-    bottom: 0px;
-    left: 0px;
+
+
 }
 
 .events-to-come{
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+    margin-bottom: 50px;
     justify-content: center;
     align-items: center;    
 }
